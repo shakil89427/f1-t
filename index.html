@@ -1,41 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>F1-T</title>
-</head>
-<body>
-    <nav class="h-[10vh] bg-[#33A0D9] flex items-center justify-between px-3 md:px-12 text-black font-bold">
-            <img class="md:ml-10 w-28" src="./Assets//logo.png" alt="">
-            <div class="flex items-center gap-6 md:gap-12">
-                <p>Join a Race</p>
-                <p>LeaderBoard</p>
-                <button class="bg-white px-6 py-1 rounded-md font-bold">Login</button>
-            </div>
-        </nav>
-        <div class="min-h-[76vh] relative flex items-center justify-center">
-            <div id="show_div" class="w-80 z-10">
-                <form id="submit_form" action="#">
-                    <h1 class="text-4xl font-bold mb-5">Password Reset</h1>
-                    <p class="tracking-[3px] font-extrabold my-2">NEW PASSWORD</p>
-                    <input class="border-[3px] border-black w-[95%] mb-8 px-1 font-bold" type="text">
-                    <p class="tracking-[3px] font-extrabold my-2">RE-ENTER NEW PASSWORD</p>
-                    <input class="border-[3px] border-black w-[95%] mb-1 px-1 font-bold" type="text">
-                    <p id="error" class="text-xs font-medium mb-8 text-[#EB5757] invisible"><i>dsgvdsgsedgb</i></p>
-                    <button type="submit" class="tracking-[3px] w-full bg-black text-white font-bold py-2 rounded-md">RESET PASSWORD</button>
-                </form>
-            </div>
-            <img class="absolute bottom-0 w-full h-64 md:h-96 z-0" src="./Assets//bg.png" alt="">
-        </div>
-    <footer class="h-[14vh] bg-[#2180B2] flex items-center gap-5 md:gap-12 px-5 md:px-32 text-white font-semibold">
-        <p>About Us</p>
-        <p>Privacy Policy</p>
-        <p>Tutorials</p>
-        <p>Terms of Service</p>
+  </head>
+  
+  <body>
+      <!-- Nav Start -->
+    <nav
+      class="min-h-[10vh] bg-[#33A0D9] flex flex-col md:flex-row items-center justify-between px-3 md:px-12 py-2 md:py-0 gap-2 text-black font-bold"
+    >
+      <img class="md:ml-10 w-28 cursor-pointer" src="./Assets//logo.png" alt="" />
+      <div class="flex items-center gap-3 md:gap-12">
+        <p class="cursor-pointer">Join a Race</p>
+        <p class="cursor-pointer">LeaderBoard</p>
+        <button class="bg-white px-6 py-1 rounded-md font-bold">Login</button>
+      </div>
+    </nav>
+    <!-- Nav End -->
+
+    <!-- Main Body Start -->
+    <div class="min-h-[76vh] relative flex items-center justify-center">
+        <!-- Submit form start -->
+      <form id="submit_form" class="w-80 z-10" action="#">
+        <h1 class="text-4xl font-bold mb-5">Password Reset</h1>
+        <p class="tracking-[3px] font-extrabold my-2">NEW PASSWORD</p>
+        <input
+          required
+          class="border-[3px] border-black w-[95%] mb-8 px-1 font-bold"
+          type="text"
+        />
+        <p class="tracking-[3px] font-extrabold my-2">RE-ENTER NEW PASSWORD</p>
+        <input
+          required
+          class="border-[3px] border-black w-[95%] mb-1 px-1 font-bold"
+          type="text"
+        />
+        <p
+          id="error"
+          class="text-xs font-medium mb-8 text-[#EB5757] italic invisible"
+        >
+          error
+        </p>
+        <button
+          type="submit"
+          class="tracking-[3px] w-full bg-black text-white font-bold py-2 rounded-md"
+        >
+          RESET PASSWORD
+        </button>
+      </form>
+      <!-- Submit form end -->
+
+      <!-- Success page start -->
+      <div id="success" class="w-80 z-10 hidden">
+        <h1 class="text-4xl font-bold">Password Changed</h1>
+        <p class="text-xs my-6 font-medium">
+          Your password has been update! Now get back in the driver seat,racers
+          are waiting for you!
+        </p>
+        <button
+          class="tracking-[3px] w-full bg-black text-white font-bold py-2 rounded-md"
+        >
+          JOIN A RACE
+        </button>
+      </div>
+      <!-- Success page end -->
+
+      <!-- Background -->
+      <img
+        class="absolute bottom-0 w-full h-64 md:h-96 z-0"
+        src="./Assets//bg.png"
+        alt=""
+      />
+    </div>
+    <!-- Main Body End -->
+
+    <!-- Footer Start -->
+    <footer
+      class="min-h-[14vh] bg-[#2180B2] flex flex-col md:flex-row items-center gap-3 md:gap-12 py-2 md:py-0 md:px-32 text-white font-semibold"
+    >
+      <p class="cursor-pointer">About Us</p>
+      <p class="cursor-pointer">Privacy Policy</p>
+      <p class="cursor-pointer">Tutorials</p>
+      <p class="cursor-pointer">Terms of Service</p>
     </footer>
+    <!-- Footer End -->
+
+    <!-- Script File -->
     <script src="./index.js"></script>
-</body>
+  </body>
 </html>
